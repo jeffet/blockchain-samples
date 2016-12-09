@@ -1,9 +1,9 @@
 {
-    "id": "https://github.com/ibm-watson-iot/blockchain-samples/contracts/platform/iotcontractminimalsample/minimal.json",
+    "id": "https://github.com/jeffet/blockchain-samples/contracts/platform/iotcontractminimalsample/minimal.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "definitions": {
         "API": {
-            "$ref": "github.com/ibm-watson-iot/blockchain-samples/contracts/platform/iotcontractplatform/schema/IOTCPschema.json/#definitions/API",
+            "$ref": "github.com/jeffet/blockchain-samples/contracts/platform/iotcontractplatform/schema/IOTCPschema.json/#definitions/API",
             "createAssetSurgicalKit": {
                 "type": "object",
                 "description": "Creates a new surgicalkit (e.g. put new)",
@@ -281,7 +281,7 @@
             }
         },
         "Model": {
-            "$ref": "github.com/ibm-watson-iot/blockchain-samples/contracts/platform/iotcontractplatform/schema/IOTCPschema.json/#definitions/Model",
+            "$ref": "github.com/jeffet/blockchain-samples/contracts/platform/iotcontractplatform/schema/IOTCPschema.json/#definitions/Model",
             "skitID": {
                 "type": "string",
                 "description": "A surgicalkit's ID"
