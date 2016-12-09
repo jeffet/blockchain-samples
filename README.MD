@@ -11,9 +11,9 @@ Purpose:
  
 Documentation:
 
-- [Introduction to Best Practices and Patterns for IoT Contract Development on Hyperledger](https://github.com/ibm-watson-iot/blockchain-samples/blob/master/docs/HyperledgerContractsIntroBestPracticesPatterns.md)
-- [Customizing or Extending these Sample Contracts](https://github.com/ibm-watson-iot/blockchain-samples/blob/master/docs/CustomizingTheSampleContract.md)
-- [Index to the Docs](https://github.com/ibm-watson-iot/blockchain-samples/blob/master/docs/README.md)
+- [Introduction to Best Practices and Patterns for IoT Contract Development on Hyperledger](https://github.com/jeffet/blockchain-samples/blob/master/docs/HyperledgerContractsIntroBestPracticesPatterns.md)
+- [Customizing or Extending these Sample Contracts](https://github.com/jeffet/blockchain-samples/blob/master/docs/CustomizingTheSampleContract.md)
+- [Index to the Docs](https://github.com/jeffet/blockchain-samples/blob/master/docs/README.md)
 
 Notes:
 
@@ -27,11 +27,11 @@ Notes:
 
 ## Smart Contracts in this Repository
 
-- [`simple_contract`](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract)
+- [`simple_contract`](https://github.com/jeffet/blockchain-samples/tree/master/contracts/basic/simple_contract)
 
     The Basic contract is a sample hyperledger blockchain contract that is provided by IBM to help you to get started with blockchain development and integration on the IBM Watson IoT Platform. You can use the Basic contract sample to create a blockchain contract that tracks and stores asset data from a device that is connected to your Watson IoT Platform organization.
 
-- [`iot_sample_contract`](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract)
+- [`iot_sample_contract`](https://github.com/jeffet/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract)
     
     This sample contract implements a simple Trade Lane scenario, moving *assets* from one place to another. It consists of several modules in `package main` that are all small enough to avoid creating separate packages in this first version. These add features that can be used without changing the code. This sample is used to explore features and patterns that are of interest to smart contract writers in the IoT domain. These are:
 
@@ -50,7 +50,7 @@ Notes:
 
 - [PingPong Contract]
 
-    This contract has been derived from the IoT Sample contract. Please read the introductory articles in the [docs folder](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/docs) if you are not familiar with how these contracts function.
+    This contract has been derived from the IoT Sample contract. Please read the introductory articles in the [docs folder](https://github.com/jeffet/blockchain-samples/tree/master/docs) if you are not familiar with how these contracts function.
 
     This contract adds the ability to send outgoing events from an advanced IoT contract. Three events are registered, as clipped from the code:
 
@@ -65,9 +65,9 @@ Notes:
     const EVTPING = "EVTPING"
     ```
 
-    See the [event listener application](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/event_listener) README and code to understand how the client registers interest in specific events and then catches them in a gRPB stream (modeled in Go as channels).
+    See the [event listener application](https://github.com/jeffet/blockchain-samples/tree/master/applications/event_listener) README and code to understand how the client registers interest in specific events and then catches them in a gRPB stream (modeled in Go as channels).
 
-- [`aviation_sample_contract`](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/industry/aviation_sample_contract)
+- [`aviation_sample_contract`](https://github.com/jeffet/blockchain-samples/tree/master/contracts/industry/aviation_sample_contract)
 
     The aviation scenario is as follows:
 
@@ -110,11 +110,11 @@ Notes:
         - new common layer to support crud operations
         - rules for acheck and bcheck (short and long term inspection cycles) and hard landing alerts 
 
-- [`cashMachine`](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/industry/cashMachine)
+- [`cashMachine`](https://github.com/jeffet/blockchain-samples/tree/master/contracts/industry/cashMachine)
 
-- [`building`](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/industry/building)
+- [`building`](https://github.com/jeffet/blockchain-samples/tree/master/contracts/industry/building)
 
-- [`Parking Meter Demo`](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/industry/parkingmeter)
+- [`Parking Meter Demo`](https://github.com/jeffet/blockchain-samples/tree/master/contracts/industry/parkingmeter)
 
     The Parking meter is FRDM-K64 and Cordio Boards combined. The FRDM board acts as the meter and the cordio acts as the BLE Beacon. The beacon transmits short urls in Eddystone standard and this points to the bluemix page https://mbed-parkingmeter.mybluemix.net. This page supports pakring meters PKM-001 through PKM-010. The code for the UI is inside mbedParkingMeterUI.
 
@@ -122,6 +122,6 @@ Notes:
 
     It makes http calls to the node-red flow - NodeFlow.json -for setting the Parking meter to free (beacon stops emitting, UI says 'Free Parking') or paid (beacon starts emitting, UI says 'Paid parking') and also initiating the countdown once payment is made.
 
-- [`Carbon Trading Demo`](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/industry/carbon_trading)
+- [`Carbon Trading Demo`](https://github.com/jeffet/blockchain-samples/tree/master/contracts/industry/carbon_trading)
 
-- [`Logistics Split`](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/industry/LogisticsSplit.0.6)
+- [`Logistics Split`](https://github.com/jeffet/blockchain-samples/tree/master/contracts/industry/LogisticsSplit.0.6)
