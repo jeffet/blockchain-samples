@@ -578,6 +578,7 @@ func RegisterDefaultRoutes() {
 	AddRoute("readAllAssets", "query", DefaultClass, readAllAssetsDefault)
 
 	AddRule("Over Temperature Alert", DefaultClass, []AlertName{overtempAlert}, overtempRule)
+	AddRule("Dropped Alert", DefaultClass, []AlertName{droppedAlert}, droppedRule)
 }
 
 //********** default temperature rule
@@ -590,6 +591,21 @@ var overtempRule RuleFunc = func(stub shim.ChaincodeStubInterface, asset *Asset)
 			RaiseAlert(asset, overtempAlert)
 		} else {
 			ClearAlert(asset, overtempAlert)
+		}
+	}
+	return nil
+}
+
+//********** jt default tap rule
+
+var droppedAlert AlertName = "DROPPED"
+var droppedRule RuleFunc = func(stub shim.ChaincodeStubInterface, asset *Asset) error {
+	tap, found := GetObjectAsNumber(asset.State, "asset.tap")
+	if found {
+		if tap > 0 {
+			RaiseAlert(asset, droppedAlert)
+		} else {
+			ClearAlert(asset, droppedAlert)
 		}
 	}
 	return nil
